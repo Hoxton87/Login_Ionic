@@ -1,0 +1,71 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Duoc Uc</ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="salir()">
+        <ion-icon slot="icon-only" name="log-out-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+
+  <div class="perfil-container">
+    <h1>Perfil</h1>
+
+    <ion-item>
+      <ion-input  
+        [(ngModel)]="user_creacion"
+        label="Usuario" 
+        labelPlacement="stacked"
+        readonly="true"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input 
+        [(ngModel)]="mail_creacion"
+        label="Email" 
+        labelPlacement="stacked"
+        readonly="true"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input 
+        [(ngModel)]="phone_creacion"
+        label="Teléfono" 
+        labelPlacement="stacked"
+        readonly="true"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input 
+      [(ngModel)]="new_clave"
+        label="Nueva Clave" 
+        type="password" 
+        labelPlacement="stacked"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input 
+      [(ngModel)]="confirmar_new_clave"
+        label="Confirmar Clave" 
+        type="password" 
+        labelPlacement="stacked"></ion-input>
+    </ion-item>
+
+    <div class="button-container">
+      <ion-button expand="block" color="primary" (click)="cambiarClave()">
+        Guardar Cambios
+      </ion-button>
+    </div>
+
+    <ion-item class="item-warning" lines="none" *ngIf="visiblewarning">
+      {{ warningMessage }}
+    </ion-item>
+
+  </div>
+
+</ion-content>

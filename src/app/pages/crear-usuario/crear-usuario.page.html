@@ -1,0 +1,74 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Duoc UC</ion-title>
+    <ion-buttons slot="end">
+      <ion-button 
+      (click)="salir()">
+        <ion-icon 
+        slot="icon-only" 
+        name="log-out-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true">
+  <div class="perfil-container">
+    <h1>Crear Usuario</h1>
+
+    <ion-item>
+      <ion-input  
+        [(ngModel)]="mdl_user_creacion"
+        label="Usuario" 
+        placeholder="Nombre de Usuario"
+        labelPlacement="stacked"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input 
+        [(ngModel)]="mdl_mail_creacion"
+        label="Email" 
+        placeholder="email@ejemplo.cl"
+        labelPlacement="stacked"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input 
+        [(ngModel)]="mdl_phone_creacion"
+        label="Teléfono" 
+        placeholder="9"
+        labelPlacement="stacked"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input 
+        [(ngModel)]="mdl_pass_creacion"
+        label="Nueva Clave" 
+        type="password" 
+        labelPlacement="stacked"></ion-input>
+    </ion-item>
+
+    <ion-item>
+      <ion-input
+        [(ngModel)]="mdl_confi_pass_creacion" 
+        label="Confirmar Clave" 
+        type="password" 
+        labelPlacement="stacked"></ion-input>
+    </ion-item>
+
+    <div class="button-container">
+      <ion-button 
+        expand="block"
+        color="primary" 
+        (click)="crear_usuario()">
+        Guardar Cambios
+      </ion-button>
+    </div>
+
+    
+    <ion-item class="item-warning" lines="none" *ngIf="visiblewarning">
+      {{ warningMessage }}
+    </ion-item>
+
+  </div>
+</ion-content>

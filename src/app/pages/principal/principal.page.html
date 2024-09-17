@@ -1,0 +1,29 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title> Duoc UC </ion-title>
+
+    <ion-buttons slot="end">
+      <ion-button (click)="navegar_perfil()">
+        <ion-icon slot="icon-only" name="person-circle-outline"></ion-icon>
+      </ion-button>
+
+      <ion-button (click)="navegar_login()">
+        <ion-icon slot="icon-only" name="log-out-outline"></ion-icon>
+      </ion-button>
+    </ion-buttons>
+    
+  </ion-toolbar>
+</ion-header>
+
+
+<ion-content [fullscreen]="true" >
+
+  <div class="contenedor_bienvenida">
+    <h1>¡Bienvenido, {{ user_creacion }}!</h1>
+    <p>Nos alegra tenerte aquí.</p>
+  </div>
+  
+</ion-content>
+
+
+

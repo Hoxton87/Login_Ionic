@@ -1,0 +1,104 @@
+/*
+ * App Global CSS
+ * ----------------------------------------------------------------------------
+ * Put style rules here that you want to apply globally. These styles are for
+ * the entire app and not just one component. Additionally, this file can be
+ * used as an entry point to import other CSS/Sass files to be included in the
+ * output CSS.
+ * For more information on global stylesheets, visit the documentation:
+ * https://ionicframework.com/docs/layout/global-stylesheets
+ */
+
+/* Core CSS required for Ionic components to work properly */
+@import "@ionic/angular/css/core.css";
+
+/* Basic CSS for apps built with Ionic */
+@import "@ionic/angular/css/normalize.css";
+@import "@ionic/angular/css/structure.css";
+@import "@ionic/angular/css/typography.css";
+@import "@ionic/angular/css/display.css";
+
+/* Optional CSS utils that can be commented out */
+@import "@ionic/angular/css/padding.css";
+@import "@ionic/angular/css/float-elements.css";
+@import "@ionic/angular/css/text-alignment.css";
+@import "@ionic/angular/css/text-transformation.css";
+@import "@ionic/angular/css/flex-utils.css";
+
+/**
+ * Ionic Dark Mode
+ * -----------------------------------------------------
+ * For more info, please see:
+ * https://ionicframework.com/docs/theming/dark-mode
+ */
+
+/* @import "@ionic/angular/css/palettes/dark.always.css"; */
+/* @import "@ionic/angular/css/palettes/dark.class.css"; */
+@import "@ionic/angular/css/palettes/dark.system.css";
+
+.contenedor {
+    background-color: #222121;
+    color: #ffffff; 
+    padding: 20px;
+    border-radius: 8px;
+}
+
+
+.boton {
+    text-decoration-color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+}
+
+.contenedor_bienvenida {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    height: 100vh; /* Ocupa toda la pantalla */
+    text-align: center;
+    padding: 20px;
+  }
+
+.contenedor_bienvenida h1 {
+    font-size: 2.5rem;
+    margin-bottom: 10px;
+  }
+
+.contenedor_bienvenida p {
+    font-size: 1.2rem;
+    color: #666;
+  }
+  
+.perfil-container {
+    padding: 20px;
+}
+  
+.perfil-container h1 {
+    font-size: 2rem;
+    font-weight: bold;
+    margin-bottom: 20px;
+    text-align: center;
+    color: #ffffff;
+}
+  
+ion-item {
+    --inner-padding-top: 10px;
+    --inner-padding-bottom: 10px;
+}
+  
+.button-container {
+    margin-top: 20px;
+    display: flex;
+    justify-content: center;
+}
+
+.item-warning{
+    --background:#970404;
+    --color:#ffffff;
+    font-weight: bold;
+    border-radius: 5px;
+    margin-left: auto;
+    margin-right: auto;
+}

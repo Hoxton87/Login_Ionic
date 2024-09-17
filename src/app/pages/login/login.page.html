@@ -1,0 +1,49 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>Duoc UC</ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" >
+
+  <ion-card class="contenedor">
+    <ion-card-header>
+      <ion-card-title>Inicia sesión</ion-card-title>
+    </ion-card-header>
+
+    <ion-card-content >
+
+      <ion-item>
+        <ion-input 
+          [(ngModel)]="mdl_user" 
+          label="Usuario" 
+          labelPlacement="floating" 
+          style="color: #ffffff;">
+        </ion-input>
+      </ion-item>
+
+      <ion-item>
+        <ion-input 
+          [(ngModel)]="mdl_pass"
+          label="Contraseña" 
+          labelPlacement="floating" 
+          type="password" 
+          style="color: #ffffff;">
+        </ion-input>
+      </ion-item>
+
+      <ion-button class="boton" (click)="navegar_principal()" color="dark" expand="full">Inicia Sesión</ion-button>
+
+      <ion-button class="boton" (click)="navegar_crear_usuario()" color="dark" expand="full">¿Eres nuevo? Regístrate</ion-button>
+
+      <ion-item class="item-warning" lines="none" *ngIf="visiblewarning">
+        Credenciales invalidas
+      </ion-item>
+      
+    </ion-card-content>
+
+  </ion-card>
+
+
+
+</ion-content>
